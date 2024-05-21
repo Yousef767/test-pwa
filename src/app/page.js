@@ -1,95 +1,103 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
+"use client";
+import { useState } from "react";
+import "./scss/style.css";
 export default function Home() {
+  const [projects, setProjects] = useState([
+    {
+      name: "name",
+      balane: "300",
+    },
+  ]);
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="container">
+      <nav className="box2">
+        <div className="logo">
+          <div className="app">
+            <img src="/logo.png" alt="" />
+            <div className="data">
+              <span>Projects Manager</span>
+              <span>Hello , User Name</span>
+            </div>
+          </div>
+        </div>
+        <a href="##">
+          <i className="fa-light fa-gear"></i>
+        </a>
+      </nav>
+
+      <div className="box2 cards">
+        <div className="dCard">
+          <div className="balance">
+            <span>Done Projects</span>
+            <h2>1200 $</h2>
+          </div>
+          <i class="fa-light fa-badge-check green"></i>
+          <div className="count">3</div>
+        </div>
+        <div className="dCard">
+          <div className="balance">
+            <span>Prepaid Projects</span>
+            <h2>200 $</h2>
+          </div>
+          <i class="fa-light fa-envelope-open-dollar blue"></i>
+          <div className="count">1</div>
+        </div>
+        <div className="dCard">
+          <div className="balance">
+            <span>Pending Projects</span>
+            <h2>1200 $</h2>
+          </div>
+          <i class="fa-light fa-timer red"></i>
+          <div className="count">1</div>
+        </div>
+        <div className="dCard">
+          <div className="balance">
+            <span>Total Balance</span>
+            <h2>1200 $</h2>
+          </div>
+          <i class="fa-light fa-circle-dollar orange"></i>
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="box2 data">
+        <header>
+          <i className="fa-solid fa-circle"></i> Done Projects
+        </header>
+        <div className="tabel">
+          <table className="tg">
+            <thead>
+              <tr>
+                <th> Project Name</th>
+                <th> Project Balance </th>
+                <th> Project State </th>
+                <th>Control Tools</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Project Name</td>
+                <td>300$</td>
+                <td>Done</td>
+                <td>
+                  <div className="tools">
+                    <i className="fa-solid fa-edit"></i>
+                    <i className="fa-solid fa-trash"></i>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
+}
+
+{
+  /* <select name="" id="">
+                    <option value="0">Edit State</option>
+                    <option value="Done">Done</option>
+                    <option value="Prepaid">Prepaid</option>
+                    <option value="Pending">Pending</option>
+                  </select> */
 }

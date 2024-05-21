@@ -1,6 +1,6 @@
 {
-  "name": "My awesome PWA app",
-  "short_name": "PWA App",
+  "name": "Projects Manager",
+  "short_name": "PWA Projects Manager",
   "icons": [
     {
       "src": "/192x192.png",
